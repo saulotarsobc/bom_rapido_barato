@@ -63,6 +63,13 @@ document.querySelectorAll('input').forEach(e => {
 
 ## SCSS
 
+### main.scss
+
+```scss
+@use "./reset.scss";
+@use "./switch.scss";
+```
+
 ### reset.scss
 
 ```scss
@@ -126,11 +133,4 @@ document.querySelectorAll('input').forEach(e => {
         }
     }
 }
-```
-
-### main.scss
-
-```scss
-@use "./reset.scss";
-@use "./switch.scss";
 ```
