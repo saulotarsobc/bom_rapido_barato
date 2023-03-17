@@ -1,21 +1,29 @@
 const bom = document.getElementById('bom');
 const rapido = document.getElementById('rapido');
 const barato = document.getElementById('barato');
+const inputs = document.querySelectorAll('input');
 
-bom.addEventListener('click', () => {
-    setTimeout(() => {
-        if (rapido.checked && rapido.checked) barato.checked = false;
-    }, 100);
+inputs.forEach(input => {
+    input.addEventListener('click', calcular(input.id));
 });
 
-rapido.addEventListener('click', () => {
-    setTimeout(() => {
-        if (rapido.checked) console.log('ligado')
-    }, 100);
-});
+function calcular(id) {
+    switch (id) {
+        case "barato":
+            if (bom.checked & barato.checked) lento();
+    }
+}
 
-barato.addEventListener('click', () => {
-    setTimeout(() => {
-        if (bom.checked) console.log('ligado')
-    }, 100);
-});
+
+/* cenarios */
+function ruin() {
+    bom.checked = false;
+}
+
+function caro() {
+    barato.checked = false;
+}
+
+function lento() {
+    rapido.checked = false;
+}
