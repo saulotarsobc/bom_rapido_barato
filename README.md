@@ -19,19 +19,19 @@
         <div>-Bom---Barato--Rapido</div>
         <!-- bom -->
         <label class="switch">
-            <input id="bom" type="checkbox" data-sig="bom" checked />
+            <input id="bom" type="checkbox" data-sig="a" checked />
             <span class="slider"></span>
         </label>
 
         <!-- barato -->
         <label class="switch">
-            <input id="barato" type="checkbox" data-sig="bar" />
+            <input id="barato" type="checkbox" data-sig="b" />
             <span class="slider"></span>
         </label>
 
         <!-- rapido -->
         <label class="switch">
-            <input id="rapido" type="checkbox" data-sig="rap" />
+            <input id="rapido" type="checkbox" data-sig="c" />
             <span class="slider"></span>
         </label>
     </div>
@@ -54,9 +54,9 @@ const desmarca = (p1, p2) => Math.random() < 0.5 ? p1.checked = false : p2.check
 document.querySelectorAll('input').forEach(e => {
     e.addEventListener('click', () => {
         const { sig } = e.dataset;
-        (sig == 'bom' && a.checked) ? (b.checked && c.checked) ? desmarca(b, c) : "" : "";
-        (sig == 'bar' && b.checked) ? (a.checked && c.checked) ? desmarca(a, c) : "" : "";
-        (sig == 'rap' && c.checked) ? (b.checked && a.checked) ? desmarca(b, a) : "" : "";
+        (sig == 'a' && a.checked) ? (b.checked && c.checked) ? desmarca(b, c) : "" : "";
+        (sig == 'b' && b.checked) ? (c.checked && a.checked) ? desmarca(c, a) : "" : "";
+        (sig == 'c' && c.checked) ? (a.checked && b.checked) ? desmarca(a, b) : "" : "";
     });
 });
 ```
