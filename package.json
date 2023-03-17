@@ -1,0 +1,14 @@
+{
+  "name": "bom_rapido_barato",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss/main.scss css/main.min.css -s compressed"
+  },
+  "repository": "https://github.com/saulotarsobc/bom_rapido_barato.git",
+  "author": "Saulo Costa <saulotarsobc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.59.3"
+  }
+}
