@@ -1,18 +1,29 @@
-const bom = document.getElementById('bom');
-const rapido = document.getElementById('rapido');
-const barato = document.getElementById('barato');
 const inputs = document.querySelectorAll('input');
 
+const bom = document.getElementById('bom');
+const barato = document.getElementById('barato');
+const rapido = document.getElementById('rapido');
+
 inputs.forEach(input => {
-    input.addEventListener('click', calcular(input.id));
+    input.addEventListener('click', e => calcular(input.id));
 });
 
 function calcular(id) {
+    console.log(id);
     switch (id) {
-        case "barato":
-            if (bom.checked & barato.checked) lento();
-    }
-}
+        case "bom": {
+            if (bom.checked) {
+                if (rapido.checked && barato.checked) lento();
+            }
+        };
+        case "rapido": { };
+        case "barato": {
+            if (barato.checked) {
+                if (rapido.checked && bom.checked) ruin();
+            }
+        };
+    };
+};
 
 
 /* cenarios */
