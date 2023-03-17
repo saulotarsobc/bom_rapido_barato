@@ -110,3 +110,10 @@ inputs.forEach(el => {
     }
 }
 ```
+
+### main.scss
+
+```scss
+@use "./reset.scss";
+@use "./switch.scss";
+```
