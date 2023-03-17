@@ -1,9 +1,8 @@
-const inputs = document.querySelectorAll('input'),
-    bom = document.getElementById('bom'),
+const bom = document.getElementById('bom'),
     barato = document.getElementById('barato'),
     rapido = document.getElementById('rapido');
 
-inputs.forEach(el => {
+document.querySelectorAll('input').forEach(el => {
     el.addEventListener('change', () => {
         switch (el.id) {
             case "bom": if (bom.checked) if (rapido.checked && barato.checked) (Math.random() < 0.5) ? rapido.checked = false : barato.checked = false;
