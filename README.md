@@ -3,26 +3,43 @@
 ## HTML
 
 ```html
-...
-    <div>-Bom---Barato--Rapido</div>
-    <!-- bom -->
-    <label class="switch">
-        <input id="bom" type="checkbox" checked />
-        <span class="slider"></span>
-    </label>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <!-- barato -->
-    <label class="switch">
-        <input id="barato" type="checkbox" />
-        <span class="slider"></span>
-    </label>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom - Rápido - Barato</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
 
-    <!-- rapido -->
-    <label class="switch">
-        <input id="rapido" type="checkbox" />
-        <span class="slider"></span>
-    </label>
-...
+<body>
+    <div id="wrap">
+        <div>-Bom---Barato--Rapido</div>
+        <!-- bom -->
+        <label class="switch">
+            <input id="bom" type="checkbox" data-sig="bom" checked />
+            <span class="slider"></span>
+        </label>
+
+        <!-- barato -->
+        <label class="switch">
+            <input id="barato" type="checkbox" data-sig="bar" />
+            <span class="slider"></span>
+        </label>
+
+        <!-- rapido -->
+        <label class="switch">
+            <input id="rapido" type="checkbox" data-sig="rap" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
 ```
 
 ## JS
