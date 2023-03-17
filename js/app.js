@@ -1,6 +1,8 @@
-const bom = document.getElementById('bom'),
-    barato = document.getElementById('barato'),
-    rapido = document.getElementById('rapido');
+const { bom, barato, rapido } = {
+    bom: document.getElementById('bom'),
+    barato: document.getElementById('barato'),
+    rapido: document.getElementById('rapido')
+};
 
 document.querySelectorAll('input').forEach(el => {
     el.addEventListener('change', () => {
